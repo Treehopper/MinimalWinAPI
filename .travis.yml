@@ -15,4 +15,4 @@ after_success:
   - >
     test "${TRAVIS_PULL_REQUEST}" = 'false' &&
     test "${TRAVIS_JDK_VERSION}" = 'oraclejdk8' &&
-    sh "$TRAVIS_BUILD_DIR/.travis.credentials.sh" && publish 
+    sh "$TRAVIS_BUILD_DIR/.travis.credentials.sh"
