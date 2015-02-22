@@ -1,6 +1,6 @@
 MinimalWinAPI ![Travis CI](https://travis-ci.org/Treehopper/MinimalWinAPI.png?branch=master "Build Status")
 ==========
-Uses WinAPI log foreground windows.
+Uses WinAPI to log foreground windows titles and Ids.
 
 Build
 ===================
