@@ -1,9 +1,19 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 notifications:
   email:
     recipients:
-      - travis-ci.org-MinimalWinAPI@hohenegger.eu
+    - travis-ci.org-MinimalWinAPI@hohenegger.eu
     on_success: change
     on_failure: always
+env:
+  global:
+  - secure: dQ0UmniAeaoLZI70/Z1r3k4vPTM6C1Z5QrgAt9WuSQc6MB9dGkxcWKVY/n0JIsj95Ty66QbTcbm15u+BFUYKlBcXZ7bACUM2GrO3rKGYu6k4En+CHkdT1gHCxbjZzn5WsCDsUEz5uN3bT0RVbJV7gThjv3k1pEMrp1udWgMWHyM=
+  - secure: WFYKG7jy+6zK/h7V7z3Nj557BGE1wjeudi9NnGPuRyIysaL6OJPMPfpEh8IsORAPHrPs8Ma0nkCxKY1Pli20BzgC0ID38eAwxDQFM9AHZkkAI52iZTMj/5g5VTk0UtkzhWt6yQu33zykUHeErgb4KqCq4I3hhwV9tgIgiBuzJGE=
+after_success:
+  - >
+    test "${TRAVIS_PULL_REQUEST}" = 'false' &&
+    test "${TRAVIS_JDK_VERSION}" = 'oraclejdk8' &&
+    sh "$TRAVIS_BUILD_DIR/.travis.credentials.sh" &&
+    sbt 'set version := version.value + "." + System.getenv("TRAVIS_BUILD_NUMBER")' publish 
