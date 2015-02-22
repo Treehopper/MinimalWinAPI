@@ -12,4 +12,6 @@
 #echo "Created ~/.bintray/.credentials file: Here it is: "
 #ls -la $FILE 
 
-curl -T $TRAVIS_BUILD_DIR/winlogger/target/winlogger*-jar-with-dependencies.jar -u$BINTRAY_USER:$BINTRAY_API_KEY https://api.bintray.com/content/$BINTRAY_USER/generic/winlogger/$TRAVIS_BUILD_NUMBER/
+PACKAGE=eu.hohenegger.winlogger
+
+curl -T $TRAVIS_BUILD_DIR/winlogger/target/winlogger*-jar-with-dependencies.jar -u$BINTRAY_USER:$BINTRAY_API_KEY https://api.bintray.com/content/$BINTRAY_USER/winlogger/$PACKAGE/$TRAVIS_BUILD_NUMBER/
