@@ -1,4 +1,4 @@
-# MinimalWinAPI ![Travis CI](https://travis-ci.org/Treehopper/MinimalWinAPI.png?branch=master "Build Status")
+MinimalWinAPI ![Travis CI](https://travis-ci.org/Treehopper/MinimalWinAPI.png?branch=master "Build Status")
 ==========
 Uses WinAPI log foreground windows.
 
