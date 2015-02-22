@@ -1,0 +1,9 @@
+language: java
+jdk:
+  - oraclejdk8
+notifications:
+  email:
+    recipients:
+      - travis-ci.org-MinimalWinAPI@hohenegger.eu
+    on_success: change
+    on_failure: always
