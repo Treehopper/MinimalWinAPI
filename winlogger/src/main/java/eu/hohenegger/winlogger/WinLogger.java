@@ -1,4 +1,4 @@
-package eu.hohenegger.winloger;
+package eu.hohenegger.winlogger;
 
 import java.util.Timer;
 import java.util.TimerTask;

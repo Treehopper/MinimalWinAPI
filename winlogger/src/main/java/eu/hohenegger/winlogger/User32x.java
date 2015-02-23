@@ -1,4 +1,4 @@
-package eu.hohenegger.winloger;
+package eu.hohenegger.winlogger;
 
 import com.sun.jna.Native;
 import com.sun.jna.platform.win32.WinDef.HWND;
