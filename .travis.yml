@@ -9,8 +9,8 @@ notifications:
     on_failure: always
 env:
   global:
-  - secure: CuZ1u9vR2RSSUG1ymKntCR89LD9n/tgFUf9IAUWV8LaCOmztIvo8ZaRqPXfpxxCAjmavZTHU4EyTEpnzqlT3AoysbFErnXO/H9LSRJquZPIqEELGbJEgAOfDc2v0zwlILlWHvA1rV9URmLVc75AKAor/GH7VApT3190VIB1/hiA=
-  - secure: Tpqw74RWZnLZPySgEMTspLT9wRYwwvJNGSGPgBT8WCmwcpueygYVdgpm0jbQdPeIa4a8UxBXL6EKUkt12QgH/R7Ae06SEnkVZoy8/eAzH25n0aWGAxG8YoJlq/imgQJDn4ZSMqBjiLErhaRx1HgL/+zeB31OZqvP42vTudb+kyg=
+  - secure: UQ1p9sjCLR2Z596LtpH1TDSB0cZLRRpWUBoxjz5r/gGHMd1dHRHYZYk04/Xp7rr3vPGEXSnS1dMZEoyrvdvV1p3KYqn8HO1FE+7f8D01FjqjZm2iDoWWwOw3iCNdQmgGRrgleXrmW4mJ07sEEdnHZRRTtS7S6ZhhSLAnWlczC2E=
+  - secure: Nf6aoBoledKzb/oQ7yGQQGmFN/9R0bUI4xbCoE6qM7+G5Z0K7OgA8txO2/+S+LfUWiVvM4KxF4xO+OwguAd93zJCLfve+Li3ZNBZBo9eJm5uF8aErmIwOg6Im2m3OXd+osZUIDlu8w6RlFrv5J6D/YkeYN0dm3vaikuPKkbFWLM=
 after_success:
 - |
   test "${TRAVIS_PULL_REQUEST}" = 'false' && test "${TRAVIS_JDK_VERSION}" = 'oraclejdk8' && sh "$TRAVIS_BUILD_DIR/.travis.credentials.sh"
